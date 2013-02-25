@@ -37,8 +37,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "rspec-rails", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
+group :development, :test do
+  gem "rspec-rails"
+  gem "capybara"
+end
 gem "thin"
 group :assets do
   gem "twitter-bootstrap-rails"
