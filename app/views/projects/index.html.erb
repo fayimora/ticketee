@@ -1,2 +1,11 @@
 <p>Index here</p>
 <%= link_to "New Project", new_project_path %>
+
+<div class="row">
+  <h2>Projects</h2>
+  <ul>
+    <% @projects.each do |project| %>
+      <li><%= link_to project.name, project_path(project) %></li>
+    <% end %>
+  </ul>
+</div>
