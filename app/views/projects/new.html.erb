@@ -1,6 +1,17 @@
 <p>new here</p>
 
 <%= form_for @project do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error">
+     <h2><%= pluralize(@project.errors.count, "error") %>
+       prohibited this foo from being saved:</h2>
+     <ul>
+     <% @project.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+    </div>
+  <% end %>
   <p>
     <%= f.label :name %> <br />
     <%= f.text_field :name %>
