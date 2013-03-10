@@ -49,3 +49,4 @@ end
 gem "thin"
 
 gem "simple_form"
+gem 'launchy'
