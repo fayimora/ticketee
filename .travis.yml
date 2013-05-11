@@ -5,6 +5,7 @@ rvm:
 env:
   - DB=postgresql
 before_script:
+  - cp config/databse.yml.ci config/database.yml
   - psql -c 'create database ticketee_test;' -U postgres
   - rake db:create:all
   - rake db:migrate
