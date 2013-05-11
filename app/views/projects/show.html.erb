@@ -1,5 +1,8 @@
 <% title(@project.name, "Projects") %>
 <p>#show here</p>
+
+<p> Project: <%= @project.name %> </p>
+
 <p class="row">
 <%= link_to "Edit Project", edit_project_path(@project) %>
 <%= link_to "Delete Project", project_path(@project), method: :delete,

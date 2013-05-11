@@ -6,5 +6,6 @@ feature "Viewing projects" do
     visit '/'
     click_link 'TextMate 2'
     expect(page.current_url).to eql(project_url(project))
+    expect(page).to have_content('TextMate 2')
   end
 end
