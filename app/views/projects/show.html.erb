@@ -3,6 +3,14 @@
 <p class="row">
 <%= link_to "Edit Project", edit_project_path(@project) %>
 <%= link_to "Delete Project", project_path(@project), method: :delete,
-  comfirm: "Are you sure you want to delete this project ?" %>
+  confirm: "Are you sure you want to delete this project ?" %>
 <%= link_to "New Ticket", new_project_ticket_path(@project) %>
 </p>
+
+
+<ul id="tickets">
+  <% @project.tickets.each do |ticket| %>
+    <li>#<%= ticket.id %> -</li>
+    <li><%= link_to ticket.title, [@project, ticket] %></li>
+  <% end %>
+</ul>
