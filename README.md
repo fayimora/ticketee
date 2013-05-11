@@ -1,4 +1,4 @@
-# ReadMe
+# Ticketee
 [![Build Status](https://travis-ci.org/fayimora/ticketee.png)](https://travis-ci.org/fayimora/ticketee)
 
 Ticketee is built from the Rails in Action book
