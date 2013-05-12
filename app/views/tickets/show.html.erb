@@ -1,4 +1,6 @@
 <div id="ticket">
   <h2><%= @ticket.title %></h2>
   <%= simple_format @ticket.description %>
+  <!--array argument is the same as edit_project_ticket_path(@project, @ticket) -->
+  <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
 </div>
