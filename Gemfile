@@ -47,9 +47,11 @@ group :development, :test do
   gem "factory_girl"
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'debugger'
 end
 
 gem "thin"
 
 gem "simple_form"
 gem 'launchy'
+gem 'devise', '2.1.0'

@@ -35,8 +35,7 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -45,12 +44,11 @@
 
     <div class="container-fluid">
       <% flash.each do |name, msg| %>
-        <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <div class="alert <%= name %> alert-<%= name == :notice ? "success" : "error" %>">
           <a class="close" data-dismiss="alert">×</a>
           <%= msg %>
         </div>
       <% end %>
-      <div class="row-fluid">
 
         <div class="span9">
           <%= yield %>
