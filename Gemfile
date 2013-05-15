@@ -55,3 +55,4 @@ gem "thin"
 gem "simple_form"
 gem 'launchy'
 gem 'devise', '2.1.0'
+gem 'email_spec'
