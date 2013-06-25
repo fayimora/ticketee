@@ -48,6 +48,7 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'debugger'
+  gem 'database_cleaner'
 end
 
 gem "thin"
