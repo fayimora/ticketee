@@ -47,7 +47,6 @@ group :development, :test do
   gem "factory_girl"
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'debugger'
   gem 'database_cleaner'
 end
 
