@@ -11,6 +11,10 @@ require 'capybara/rspec'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.before do
+    # Clean out the email deliveries that have happened between each test run
+    ActionMailer::Base.deliveries.clear
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
